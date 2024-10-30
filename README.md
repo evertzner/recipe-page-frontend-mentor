@@ -1,67 +1,58 @@
-# Astro + Tailwind
+# Frontend Mentor - Recipe page solution
 
-## 🔍 Overview
+This is a solution to the [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-Here you will find a template to create an `Astro` project that uses `Tailwind`. Also it has `eslint` and `prettier` configured.
+## Table of contents
 
-Run the following command to create a project with the template:
+- [Frontend Mentor - Recipe page solution](#frontend-mentor---recipe-page-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+  - [Installation](#installation)
+    - [Install dependencies](#install-dependencies)
+    - [Run Application](#run-application)
 
-```sh
-pnpm create astro@latest <project-name> -- --template evertzner/astro-tailwind-template --yes
+## Overview
+
+### Screenshot
+
+Mobile Screenshot
+
+![Mobile Screenshot](./screenshots/mobile.png)
+
+Tablet Screenshot
+
+![Desktop Screenshot](./screenshots/tablet.png)
+
+Desktop Screenshot
+
+![Desktop Screenshot](./screenshots/desktop.png)
+
+### Links
+
+- Solution URL: [Repository](https://github.com/evertzner/recipe-page-frontend-mentor)
+- Live Site URL: [Planet Facts](https://recipe-page-esteban-vertzner.netlify.app/)
+
+## My process
+
+### Built with
+
+- Astro
+- TailwindCSS
+
+## Installation
+
+### Install dependencies
+
+```bash
+pnpm install
 ```
 
-## 🚀 Project Structure
+### Run Application
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── .husky/
-│   └── _pre-commit
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Main.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│   │   └── index.astro
-│   └── styles.css
-└── .gitignore
-└── .prettierrc
-└── .prettierrc.mjs
-└── astro.config.mjs
-└── eslint.config.js
-└── package.json
-└── tailwind.config.mjs
-└── tsconfig.json
+```bash
+pnpm run dev
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command            | Action                                       |
-| :----------------- | :------------------------------------------- |
-| `pnpm install`     | Installs dependencies                        |
-| `pnpm run dev`     | Starts local dev server at `localhost:4321`  |
-| `pnpm run build`   | Build your production site to `./dist/`      |
-| `pnpm run preview` | Preview your build locally, before deploying |
-| `pnpm run format`  | Format the document using Prettier           |
-| `pnpm run check`   | Check types using `astro check`              |
-| `pnpm run lint`    | Check linting and format                     |
-
-## Husky
-
-To initiate husky run the following command.
-
-```sh
-npx husky init
-```
-
-Replace `pre-commit` file content with content from `_pre-commit`
