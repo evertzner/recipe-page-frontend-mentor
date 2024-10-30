@@ -1,0 +1,36 @@
+---
+import Separator from './Separator.astro';
+
+interface Props {
+  items: {
+    title: string;
+    description: string;
+  }[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class='flex flex-col items-start gap-300 self-stretch'>
+  <h2>Nutrition</h2>
+  <p>
+    <slot />
+  </p>
+  <div class='flex flex-col items-start gap-150 self-stretch'>
+    {
+      items.map((item, index) => (
+        <div class='self-stretch'>
+          <div class='text-preset-4 grid grid-cols-2 items-center justify-center gap-200 px-400'>
+            <div class='text-stone-600'>{item.title}</div>
+            <div class='font-bold text-brown-800'>{item.description}</div>
+          </div>
+          {items.length - 1 !== index && (
+            <div class='mt-200'>
+              <Separator />
+            </div>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</div>

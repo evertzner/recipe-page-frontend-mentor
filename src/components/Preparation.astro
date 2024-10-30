@@ -1,0 +1,25 @@
+---
+interface Props {
+  items: {
+    title: string;
+    description: string;
+  }[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class='flex flex-col items-start gap-200 self-stretch rounded-xl bg-rose-50 p-300'>
+  <h3>Preparation time</h3>
+  <ul class='flex list-outside list-disc flex-col items-start gap-100 self-stretch pl-300'>
+    {
+      items.map((item) => (
+        <li class='text-preset-4 marker:text-xs marker:text-rose-800'>
+          <div class='ml-200 text-stone-600'>
+            <strong>{item.title}</strong>: {item.description}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>

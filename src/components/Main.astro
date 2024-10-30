@@ -1,3 +1,108 @@
-<main>
-  <h1 class='text-2xl text-center'>Welcome to template by Esteban Vertzner</h1>
+---
+import Hero from './Hero.astro';
+import Ingredients from './Ingredients.astro';
+import Instructions from './Instructions.astro';
+import Nutrition from './Nutrition.astro';
+import Preparation from './Preparation.astro';
+import Separator from './Separator.astro';
+
+const items = [
+  {
+    title: 'Total',
+    description: 'Approximately 10 minutes'
+  },
+  {
+    title: 'Preparation',
+    description: '5 minutes'
+  },
+  {
+    title: 'Cooking',
+    description: '5 minutes'
+  }
+];
+
+const ingredients = [
+  {
+    ingredient: '2-3 large eggs'
+  },
+  {
+    ingredient: 'Salt, to taste'
+  },
+  {
+    ingredient: 'Pepper, to taste'
+  },
+  {
+    ingredient: '1 tablespoon of butter or oil'
+  },
+  {
+    ingredient: 'Optional fillings: cheese, diced vegetables, cooked meats, herbs'
+  }
+];
+
+const instructions = [
+  {
+    step: 'Beat the eggs',
+    explaination:
+      'In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.'
+  },
+  {
+    step: 'Heat the pan',
+    explaination: 'Place a non-stick pan over medium heat and add the butter or oil.'
+  },
+  {
+    step: 'Cook the omelette',
+    explaination:
+      'Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.'
+  },
+  {
+    step: 'Add fillings (optional)',
+    explaination:
+      'When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.'
+  },
+  {
+    step: 'Fold and serve',
+    explaination:
+      'As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.'
+  },
+  {
+    step: 'Enjoy!',
+    explaination: 'Serve hot, with additional salt and pepper if needed.'
+  }
+];
+
+const nutrition = [
+  {
+    title: 'Calories',
+    description: '277kcal'
+  },
+  {
+    title: 'Carbs',
+    description: '0g'
+  },
+  {
+    title: 'Protein',
+    description: '20g'
+  },
+  {
+    title: 'Fat',
+    description: '22g'
+  }
+];
+---
+
+<main
+  class='flex flex-col items-start gap-400 self-stretch px-400 py-500 md:px-0 md:pb-0 md:pt-500'
+>
+  <Hero title='Simple Omelette Recipe'>
+    An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
+    to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+  </Hero>
+  <Preparation items={items} />
+  <Ingredients ingredients={ingredients} />
+  <Separator />
+  <Instructions instructions={instructions} />
+  <Separator />
+  <Nutrition items={nutrition}
+    >The table below shows nutritional values per serving without the additional fillings.</Nutrition
+  >
 </main>

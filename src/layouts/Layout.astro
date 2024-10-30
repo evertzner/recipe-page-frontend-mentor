@@ -13,11 +13,21 @@ const { title } = Astro.props;
     <meta charset='UTF-8' />
     <meta name='description' content='Astro description' />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='icon' type='image/svg+xml' href='/favicon-32x32.png' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap'
+      rel='stylesheet'
+    />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body
+    class='flex flex-col items-start bg-white md:grid md:place-content-center md:bg-stone-100 md:px-600 md:py-1600'
+  >
+    <div class='rounded-3xl bg-white md:max-w-[616px] md:p-500 2xl:max-w-[736px]'>
+      <slot />
+    </div>
   </body>
 </html>

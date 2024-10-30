@@ -1,0 +1,22 @@
+---
+interface Props {
+  ingredients: {
+    ingredient: string;
+  }[];
+}
+
+const { ingredients } = Astro.props;
+---
+
+<div class='flex flex-col items-start gap-300 self-stretch'>
+  <h2>Ingredients</h2>
+  <ul class='flex list-outside list-disc flex-col items-start gap-100 self-stretch pl-200'>
+    {
+      ingredients.map((item) => (
+        <li class='marker:text-xs marker:text-brown-800'>
+          <div class='ml-300 text-stone-600'>{item.ingredient}</div>
+        </li>
+      ))
+    }
+  </ul>
+</div>

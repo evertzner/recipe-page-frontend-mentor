@@ -1,0 +1,27 @@
+---
+interface Props {
+  instructions: {
+    step: string;
+    explaination: string;
+  }[];
+}
+
+const { instructions } = Astro.props;
+---
+
+<div class='flex flex-col items-start gap-300 self-stretch'>
+  <h2>Instructions</h2>
+  <ol
+    class='flex list-outside list-decimal flex-col items-start gap-100 self-stretch pl-200 md:pl-300'
+  >
+    {
+      instructions.map((item) => (
+        <li class='text-stone-600 marker:font-bold marker:text-brown-800'>
+          <div class='ml-200'>
+            <strong>{item.step}</strong>: {item.explaination}
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</div>
